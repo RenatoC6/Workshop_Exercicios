@@ -48,7 +48,7 @@ public class Livro {
     public static void exibirDetalhes(Livro livro){
 
         System.out.println();
-        System.out.println("Exibindo detalhes do livro");
+        System.out.println("Exibindo detalhes do livro:");
         System.out.println("Titulo:" + livro.getTitulo());
         System.out.println("Autor:" + livro.getAutor());
         System.out.println("Ano:" + livro.getAnoPublicacao());

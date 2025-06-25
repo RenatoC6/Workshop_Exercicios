@@ -25,7 +25,7 @@ public class Biblioteca {
 
     }
 
-    public boolean buscaLivros(String titulo) {
+    public boolean buscaLivroPorTitulo(String titulo) {
         System.out.println();
         System.out.println("Buscando livros por titulo: ");
         String retornoTitulo= titulo;
@@ -62,7 +62,7 @@ public class Biblioteca {
         //String titulo = "livro 1";
         String titulo = "xxxxx";
 
-        boolean achou  = biblioteca.buscaLivros(titulo);
+        boolean achou  = biblioteca.buscaLivroPorTitulo(titulo);
         if (achou) {
             System.out.println("Sucesso da pesquisa do: "+ titulo);  }
         else {
