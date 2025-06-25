@@ -1,4 +1,4 @@
-package Exercicios_conceitos_java;
+package Conceitos_java;
 
 public class Matrizes {
 
