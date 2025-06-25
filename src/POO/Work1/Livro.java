@@ -4,9 +4,13 @@ public class Livro {
 
     private String  titulo;
     private String  autor;
-    private int  anoPublicacao;
+    private int anoPublicacao;
 
-    public Livro(){}
+    public Livro(String titulo, String autor, int anoPublicacao) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anoPublicacao = anoPublicacao;
+    }
 
     @Override
     public String toString() {
@@ -45,13 +49,13 @@ public class Livro {
     }
 
 
-    public static void exibirDetalhes(Livro livro){
+    public void exibirDetalhes(){
 
         System.out.println();
-        System.out.println("Exibindo detalhes do livro:");
-        System.out.println("Titulo:" + livro.getTitulo());
-        System.out.println("Autor:" + livro.getAutor());
-        System.out.println("Ano:" + livro.getAnoPublicacao());
+        System.out.println("Título: " + getTitulo() +
+                ", Autor: " + getAutor() +
+                ", Ano: " + getAnoPublicacao());
+
 
 }
 

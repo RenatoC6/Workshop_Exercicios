@@ -8,19 +8,24 @@ public class Biblioteca {
 
     public void adicionarLivro(Livro livro) {
         livros.add(livro);
-        System.out.println("Livro adicionado: " + livro); // o metodo "toString" na classe Livro mostra
-        // o livro adicionado de forma legivel
+        livro.exibirDetalhes();
     }
+
+    public void adicionarRevista(Revista revista) {
+        livros.add(revista);
+        revista.exibirDetalhes();
+             }
 
     public void listarLivros(){
         if (livros.isEmpty()) {
             System.out.println("Nenhum livro na biblioteca.");
         } else {
             System.out.println();
-            System.out.println("Livros na biblioteca:");
+            System.out.println("Itens na biblioteca:");
             for (Livro livro : livros) { // for each loop - percorre a array livros que contem objetos tipo Livro
-                System.out.println("Livro: " + livro.getTitulo());
+                System.out.println("item biblioteca: " + livro.getTitulo());
             }
+
         }
 
     }
@@ -43,19 +48,15 @@ public class Biblioteca {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
 
-        Livro livro1 = new Livro();
-        livro1.setTitulo("Livro 1");
-        livro1.setAutor("joao");
-        livro1.setAnoPublicacao(2020);
-
+        Livro livro1 = new Livro("Livro1",  "Joao",2020);
         biblioteca.adicionarLivro(livro1);
 
-        Livro livro2 = new Livro();
-        livro2.setTitulo("Livro 2");
-        livro2.setAutor("Maria");
-        livro2.setAnoPublicacao(2025);
-
+        Livro livro2 = new Livro("Livro2",  "Maria",2025);
         biblioteca.adicionarLivro(livro2);
+
+        Revista revista1 = new Revista("Revista1", "Antonio", 2025, 100);
+        biblioteca.adicionarRevista(revista1);
+
 
         biblioteca.listarLivros();
 
@@ -70,8 +71,8 @@ public class Biblioteca {
         }
 
         // utilizando outro metodo para exibir os detalhes do livro definido na classe Livro
-        Livro.exibirDetalhes(livro1);
-        Livro.exibirDetalhes(livro2);
+        //Livro.exibirDetalhes(livro1);
+        //Livro.exibirDetalhes(livro2);
 
     }
 }
