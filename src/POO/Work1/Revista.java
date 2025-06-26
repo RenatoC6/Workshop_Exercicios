@@ -1,6 +1,8 @@
 package POO.Work1;
 
-public class Revista extends Livro {
+import java.io.Serializable;
+
+public class Revista extends Livro implements ItemBiblioteca   {
 
     private int edicao;
 
@@ -12,14 +14,18 @@ public class Revista extends Livro {
 
     @Override
     public void exibirDetalhes() {
-            System.out.println();
-            System.out.println("Título: " + getTitulo() +
+          System.out.println("Título: " + getTitulo() +
                     ", Autor: " + getAutor() +
                     ", Ano: " + getAnoPublicacao() +
-                    ", Edição: " + edicao);
+                    ", Edição: " + getEdicao() +
+                    ", Tipo: " + getTipo());
         }
+      @Override
+    public String getTipo(){
 
+        return "Revista";
 
+    }
 
 
 }

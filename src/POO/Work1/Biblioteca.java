@@ -21,9 +21,9 @@ public class Biblioteca {
             System.out.println("Nenhum livro na biblioteca.");
         } else {
             System.out.println();
-            System.out.println("Itens na biblioteca:");
+            System.out.println("Listando itens na biblioteca:");
             for (Livro livro : livros) { // for each loop - percorre a array livros que contem objetos tipo Livro
-                System.out.println("item biblioteca: " + livro.getTitulo());
+                System.out.println("item biblioteca: " + livro.getTitulo() + " - tipo: " + livro.getTipo());
             }
 
         }
@@ -48,13 +48,14 @@ public class Biblioteca {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
 
-        Livro livro1 = new Livro("Livro1",  "Joao",2020);
+        System.out.println("Adicionando itens na biblioteca:");
+        Livro livro1 = new Livro("Senhor dos aneis",  "Joao",2020);
         biblioteca.adicionarLivro(livro1);
 
-        Livro livro2 = new Livro("Livro2",  "Maria",2025);
+        Livro livro2 = new Livro("jogada de mestre",  "Maria",2025);
         biblioteca.adicionarLivro(livro2);
 
-        Revista revista1 = new Revista("Revista1", "Antonio", 2025, 100);
+        Revista revista1 = new Revista("super interessante", "Antonio", 2025, 100);
         biblioteca.adicionarRevista(revista1);
 
 
@@ -70,9 +71,6 @@ public class Biblioteca {
             System.out.println("Livro nao encontrado na busca: " + titulo);
         }
 
-        // utilizando outro metodo para exibir os detalhes do livro definido na classe Livro
-        //Livro.exibirDetalhes(livro1);
-        //Livro.exibirDetalhes(livro2);
 
     }
 }

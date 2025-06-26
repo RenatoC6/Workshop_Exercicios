@@ -1,6 +1,6 @@
 package POO.Work1;
 
-public class Livro {
+public class Livro extends Item implements ItemBiblioteca {
 
     private String  titulo;
     private String  autor;
@@ -25,19 +25,11 @@ public class Livro {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
+      public String getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public int getAnoPublicacao() {
+       public int getAnoPublicacao() {
         return anoPublicacao;
     }
 
@@ -48,15 +40,17 @@ public class Livro {
         this.anoPublicacao = anoPublicacao;
     }
 
-
+    @Override
     public void exibirDetalhes(){
-
-        System.out.println();
         System.out.println("Título: " + getTitulo() +
                 ", Autor: " + getAutor() +
-                ", Ano: " + getAnoPublicacao());
-
-
+                ", Ano: " + getAnoPublicacao() +
+                ", Tipo: " + getTipo());
 }
+    @Override
+    public String getTipo(){
+        //return getTipo();
+        return "Livro";
 
+    }
 }
